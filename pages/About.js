@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+// import Image from "next/image";
 
 function Home() {
 
@@ -18,10 +18,10 @@ function Home() {
           <h1>Test</h1>
         </div>
         <div className="img-card">
-          <img
-            src="https://assets.codepen.io/t-1/juli-kosolapova-pZ-XFIrJMtE-unsplash.jpg"
+          {/* <Image
+            src={"https://assets.codepen.io/t-1/juli-kosolapova-pZ-XFIrJMtE-unsplash.jpg"}
             alt="A desert scene. Deep orange sand and a cloudy sky, with craggy hills and mountains looming in the distance. "
-          />
+          /> */}
         </div>
         {/* Photo by Juli Kosolapova for Unsplash. https://unsplash.com/photos/pZ-XFIrJMtE */}
       </header>
@@ -37,10 +37,10 @@ function Home() {
             doloribus, consectetur eum exercitationem sit ipsam, est nesciunt
             maxime, eius animi dolor? Harum.
           </p>
-          <img
+          {/* <img
             src="https://assets.codepen.io/t-1/saad-chaudhry-WdBu6PJ83uY-unsplash.jpg"
             alt="A distant view of a vast forest of evergreen trees covered with snow. A pink fog hovers close to the tops of the trees. "
-          />
+          /> */}
           {/* Photo by Saad Chaudhry for Unsplash. https://unsplash.com/photos/WdBu6PJ83uY */}
           <h2>
             <span className="h_decoration" /> Expand Your Horizons
@@ -51,10 +51,10 @@ function Home() {
             voluptatum amet autem culpa magnam debitis! Dolores esse quam amet
             nobis ut.
           </p>
-          <img
+          {/* <img
             src="https://assets.codepen.io/t-1/claudel-rheault-ZVbv1akA-l4-unsplash.jpg"
             alt="A grassy field in a valley between green, grassy hills, beneath a sunlit sky filled with puffy clouds. "
-          />
+          /> */}
           {/* image by Claudel Rheault for Unsplash. Full size at: https://unsplash.com/photos/ZVbv1akA-l4 */}
           <p>
             Sunt excepturi in nostrum, fugiat veritatis ab sit sequi nemo
@@ -77,10 +77,10 @@ function Home() {
             facilisis lobortis dolor quis scelerisque. Pellentesque porta orci
             nec viverra semper.
           </p>
-          <img
+          {/* <img
             src="https://assets.codepen.io/t-1/simon-berger-9Ct73yKbpEo-unsplash.jpg"
             alt="A waterfall, bathed in sunlight, pours down into a green river in a tropical forest. "
-          />
+          /> */}
           {/* Photo by Simon Berger for Unsplash. https://unsplash.com/photos/9Ct73yKbpEo */}
           <p>
             In nec ornare mauris. Ut bibendum libero sit amet leo finibus
@@ -96,10 +96,10 @@ function Home() {
             Pellentesque erat quam, iaculis pellentesque eros non, accumsan
             laoreet quam.
           </p>
-          <img
+          {/* <img
             src="https://assets.codepen.io/t-1/robert-bye-OlZ1nWLEEgM-unsplash.jpg"
             alt="A distant view of a cliffside beach. The water is deep blue and very calm."
-          />
+          /> */}
           {/* photo by Robert Bye for Unsplash.  https://unsplash.com/photos/OlZ1nWLEEgM */}
           <p>
             Praesent nec lacus urna. Pellentesque hendrerit turpis sed dictum
@@ -141,7 +141,7 @@ function Home() {
             </Link>
           </li>
           <li>
-            <Link href="/about" onClick={() => router.reload()}>
+            <Link href="/About" onClick={() => router.reload()}>
               <a>About Us</a>
             </Link>
           </li>

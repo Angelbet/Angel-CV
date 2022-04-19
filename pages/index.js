@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import profile from "../styles/assets/images/profile-1.png";
+import profile from "../public/img/profile-1.png";
 import proyect_1 from "../styles/assets/images/work_1.jpg";
 import proyect_2 from "../styles/assets/images/work_2.jpg";
 import proyect_3 from "../styles/assets/images/work_3.jpg";
@@ -15,6 +15,7 @@ import { useRouter } from "next/router";
 //   },
 //   { ssr: false }
 // );
+
 
 export default function Home() {
   const router = useRouter();
@@ -128,8 +129,8 @@ export default function Home() {
                 <div className="css-typing">
                   <h1>Soy Angel Becerra</h1>
                   <h1>Desarrollador Web y</h1>
-                  <h1>App Front-end con sede</h1>
-                  <h1>en Venezuela.</h1>
+                  <h1>App Front-end con</h1>
+                  <h1>sede en Venezuela.</h1>
                 </div>
 
                 <ul className="ds-numbervalulist">
