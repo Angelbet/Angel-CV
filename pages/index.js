@@ -6,6 +6,7 @@ import proyect_2 from "../styles/assets/images/work_2.jpg";
 import proyect_3 from "../styles/assets/images/work_3.jpg";
 import Script_1 from "../components/Script_1";
 import { useRouter } from "next/router";
+// import pdf from "../public/pdf/Angel_Becerra_CV.pdf"
 
 // import '../static/js/main'
 
@@ -15,7 +16,6 @@ import { useRouter } from "next/router";
 //   },
 //   { ssr: false }
 // );
-
 
 export default function Home() {
   const router = useRouter();
@@ -27,7 +27,6 @@ export default function Home() {
       }, 100);
     }
   }
-
 
   return (
     <>
@@ -177,7 +176,11 @@ export default function Home() {
               bajo presión y en cambio constante.
             </p>
             <div className="ds-button-sec text-center">
-              <a href="#" className="ds-button">
+              <a
+                href="./pdf/Angel_Becerra_CV.pdf"
+                target="_blank"
+                className="ds-button"
+              >
                 Descargar CV
               </a>
             </div>
@@ -407,7 +410,12 @@ export default function Home() {
                                 <Image src={proyect_1} alt="web1" />
                               </figure>
                             </div>
-                            <a href="works-setails.html" className="ds-button">
+                            <a
+                              href="https://somaxgroup.com/"
+                              target="_blank"
+                              className="ds-button"
+                              rel="noreferrer"
+                            >
                               Ver
                             </a>
                           </div>
@@ -426,7 +434,12 @@ export default function Home() {
                                 <Image src={proyect_2} alt="web2" />
                               </figure>
                             </div>
-                            <a href="works-setails.html" className="ds-button">
+                            <a
+                              href="https://ferralca.com.ve/"
+                              target="_blank"
+                              className="ds-button"
+                              rel="noreferrer"
+                            >
                               Ver
                             </a>
                           </div>
@@ -449,7 +462,12 @@ export default function Home() {
                                 <Image src={proyect_3} alt="web3" />
                               </figure>
                             </div>
-                            <a href="works-setails.html" className="ds-button">
+                            <a
+                              href="https://comproy.com/"
+                              target="_blank"
+                              className="ds-button"
+                              rel="noreferrer"
+                            >
                               Ver
                             </a>
                           </div>
