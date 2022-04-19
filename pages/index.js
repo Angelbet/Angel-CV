@@ -7,9 +7,6 @@ import proyect_3 from "../styles/assets/images/work_3.jpg";
 import Script_1 from "../components/Script_1";
 import { useRouter } from "next/router";
 
-
-// perico
-
 // import '../static/js/main'
 
 // const main = dynamic(
