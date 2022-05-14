@@ -4,6 +4,8 @@ import profile from "../public/img/profile-1.png";
 import proyect_1 from "../styles/assets/images/work_1.jpg";
 import proyect_2 from "../styles/assets/images/work_2.jpg";
 import proyect_3 from "../styles/assets/images/work_3.jpg";
+import proyect_4 from "../styles/assets/images/work_4.png";
+
 import Script_1 from "../components/Script_1";
 import { useRouter } from "next/router";
 // import pdf from "../public/pdf/Angel_Becerra_CV.pdf"
@@ -464,6 +466,30 @@ export default function Home() {
                             </div>
                             <a
                               href="https://comproy.com/"
+                              target="_blank"
+                              className="ds-button"
+                              rel="noreferrer"
+                            >
+                              Ver
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-5 grid-margin">
+                    <div className="card overlay">
+                      <div className="card-body lope">
+                        <h3 className="ds-work-tilte">Colegio El Ángel</h3>
+                        <div className="row justify-content-center">
+                          <div className=" my-auto">
+                            <div className="d-flex d-sm-block d-md-flex align-items-center">
+                              <figure>
+                                <Image src={proyect_4} alt="web3" />
+                              </figure>
+                            </div>
+                            <a
+                              href="http://64.227.2.149/"
                               target="_blank"
                               className="ds-button"
                               rel="noreferrer"
