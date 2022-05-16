@@ -4,7 +4,11 @@ import profile from "../public/img/profile-1.png";
 import proyect_1 from "../styles/assets/images/work_1.jpg";
 import proyect_2 from "../styles/assets/images/work_2.jpg";
 import proyect_3 from "../styles/assets/images/work_3.jpg";
-import proyect_4 from "../styles/assets/images/work_4.png";
+import proyect_4 from "../styles/assets/images/work_4.jpg";
+import Selector from "../components/Selector";
+
+import en from "../translations/en/en";
+import es from "../translations/es/es";
 
 import Script_1 from "../components/Script_1";
 import { useRouter } from "next/router";
@@ -22,6 +26,11 @@ import { useRouter } from "next/router";
 export default function Home() {
   const router = useRouter();
 
+  // Cambio de Lenguaje
+  const { asPath, locale, locales } = useRouter();
+  const t = locale === "es" ? es : en;
+
+  // Reload de la Pagina
   if (typeof window !== "undefined") {
     function refresh() {
       setTimeout(function () {
@@ -70,7 +79,7 @@ export default function Home() {
             </a>
             {/* logo */}
             {/* social */}
-            <ul className="ds-social">
+            <ul className="ds-social justify-content-center">
               <li>
                 <a
                   href="mailto:angelfabian.becerra@gmail.com"
@@ -103,6 +112,7 @@ export default function Home() {
                   <i className="ri-facebook-fill" />
                 </a>
               </li>
+              <Selector />
             </ul>
             {/* social */}
           </div>
@@ -123,29 +133,29 @@ export default function Home() {
             <div className="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7">
               <section>
                 <h1>
-                  <span>¡Hola!</span>
+                  <span>{t.home.hi}</span>
                   {/* Soy Angel Becerra <br /> Desarrollador Web y App Front-end con
                   sede en Venezuela. */}
                 </h1>
                 <div className="css-typing">
-                  <h1>Soy Angel Becerra</h1>
-                  <h1>Desarrollador Web y</h1>
-                  <h1>App Front-end con</h1>
-                  <h1>sede en Venezuela.</h1>
+                  <h1>{t.home.me}</h1>
+                  <h1>{t.home.me2}</h1>
+                  <h1>{t.home.me3}</h1>
+                  <h1>{t.home.me4}</h1>
                 </div>
 
                 <ul className="ds-numbervalulist">
                   <li>
                     <strong>2+</strong>
-                    <span>Experiencia</span>
+                    <span>{t.home.me5}</span>
                   </li>
                   <li>
                     <strong>5</strong>
-                    <span>Proyectos</span>
+                    <span>{t.home.me6}</span>
                   </li>
                   <li>
                     <strong>3</strong>
-                    <span>Clientes Felices</span>
+                    <span>{t.home.me7}</span>
                   </li>
                 </ul>
               </section>
@@ -155,47 +165,45 @@ export default function Home() {
       </div>
       {/* banner */}
 
-      {/* about */}
+      {/* Sobre mi */}
       <div className="ds-about-section">
         <div className="container overlay">
           <section className="lope">
-            <h2 className="ds-heading">Sobre mi</h2>
-            <p>
-              Tengo 19 años y 2 años de experiencia como Desarrollador Web
-              Front-End, a su vez estudiando actualmente Ingeniería en
-              Informática. He trabajado como freelancer para algunas empresas
-              con satisfactorios resultados. Soy una persona responsable en su
-              trabajo, metódico, organizado y apasionado en lo que hace, soy
-              pro-activo y disfruto tanto del trabajo en equipo como del
-              desarrollado individualmente, en el cual puedo impregnar mi huella
-              personal. Tomo cada proyecto y objetivo como propio, por lo que
-              pongo mi mejor esfuerzo y empeño en cada tarea y trato siempre de
-              optimizar el código al máximo para que la experiencia final del
-              usuario sea la óptima.
-            </p>
-            <p>
-              Me gusta aprender constantemente y me desenvuelvo en situaciones
-              bajo presión y en cambio constante.
-            </p>
+            <h2 className="ds-heading">{t.home.about}</h2>
+            <p>{t.home.about2}</p>
+            <p>{t.home.about3}</p>
             <div className="ds-button-sec text-center">
-              <a
-                href="./pdf/Angel_Becerra_CV.pdf"
-                target="_blank"
-                className="ds-button"
-              >
-                Descargar CV
-              </a>
+              <div className="row justify-content-center">
+                <div className="col-md-5">
+                  <a
+                    href="./pdf/Angel_Becerra_CV_es.pdf"
+                    target="_blank"
+                    className="ds-button margin-bottom-lg"
+                  >
+                    Descargar CV | Español
+                  </a>
+                </div>
+                <div className="col-md-5">
+                  <a
+                    href="./pdf/Angel_Becerra_CV_en.pdf"
+                    target="_blank"
+                    className="ds-button"
+                  >
+                    Download CV | English
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
         </div>
       </div>
-      {/* about */}
+      {/* Sobre mi */}
 
       {/* Educación */}
       <div className="ds-experience-section">
         <div className="container overlay">
           <section className="lope">
-            <h2 className="ds-heading">Educación</h2>
+            <h2 className="ds-heading">{t.home.education}</h2>
 
             <div className="education" id="education">
               <div className="content-inner">
@@ -207,12 +215,10 @@ export default function Home() {
                         <i>
                           <strong> / </strong>
                         </i>
-                        Actualmente
+                        {t.home.education2}
                       </span>
-                      <h3 className="ds-officename">
-                        Universidad Alejandro de Humboldt
-                      </h3>
-                      <p>Ingeniería en Informática</p>
+                      <h3 className="ds-officename">{t.home.education3}</h3>
+                      <p>{t.home.education4}</p>
                     </div>
                   </div>
                   <div className="col-md-6">
@@ -221,41 +227,85 @@ export default function Home() {
                       <h3 className="ds-officename">
                         Javascript with HTML5, CSS3 from zero to Expert-2021
                       </h3>
-                      <p>Con Certificado de Finalización</p>
+                      <p>
+                        {t.home.udemy} &nbsp; &nbsp;
+                        <a
+                          href="./pdf/Courses/Certificate_1.pdf"
+                          target="_blank"
+                          className="ds-button"
+                          rel="noreferrer"
+                        >
+                          {t.home.show}
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="edu-col ds-experience-list">
                       <span>2022</span>
-                      <h3 className="ds-officename">
-                        Universidad Desarrollo Web - FrontEnd Web Developer
-                      </h3>
-                      <p>Con Certificado de Finalización</p>
+                      <h3 className="ds-officename">{t.home.education5}</h3>
+                      <p>
+                        {t.home.udemy} &nbsp; &nbsp;
+                        <a
+                          href="./pdf/Courses/Certificate_2.pdf"
+                          target="_blank"
+                          className="ds-button"
+                          rel="noreferrer"
+                        >
+                          {t.home.show}
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="edu-col ds-experience-list">
                       <span>2022</span>
-                      <h3 className="ds-officename">
-                        JavaScript: Desde cero con NodeJS
-                      </h3>
-                      <p>Con Certificado de Finalización</p>
+                      <h3 className="ds-officename">{t.home.education6}</h3>
+                      <p>
+                        {t.home.udemy} &nbsp; &nbsp;
+                        <a
+                          href="./pdf/Courses/Certificate_3.pdf"
+                          target="_blank"
+                          className="ds-button"
+                          rel="noreferrer"
+                        >
+                          {t.home.show}
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="edu-col ds-experience-list">
                       <span>2022</span>
-                      <h3 className="ds-officename">
-                        Desarrollo de Aplicaciones con JavaScript (Edición 2022)
-                      </h3>
-                      <p>Con Certificado de Finalización</p>
+                      <h3 className="ds-officename">{t.home.education7}</h3>
+                      <p>
+                        {t.home.udemy} &nbsp; &nbsp;
+                        <a
+                          href="./pdf/Courses/Certificate_4.pdf"
+                          target="_blank"
+                          className="ds-button"
+                          rel="noreferrer"
+                        >
+                          {t.home.show}
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="edu-col ds-experience-list">
                       <span>2022</span>
-                      <h3 className="ds-officename">React Desde Cero</h3>
-                      <p>Con Certificado de Finalización</p>
+                      <h3 className="ds-officename">{t.home.education8}</h3>
+                      <p>
+                        {t.home.udemy} &nbsp; &nbsp;
+                        <a
+                          href="./pdf/Courses/Certificate_5.pdf"
+                          target="_blank"
+                          className="ds-button"
+                          rel="noreferrer"
+                        >
+                          {t.home.show}
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -273,7 +323,7 @@ export default function Home() {
             <div className="col-sm-6 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 grid-margin">
               <div className="card overlay">
                 <div className="card-body lope">
-                  <h2 className="ds-heading">Habilidades Principales</h2>
+                  <h2 className="ds-heading">{t.home.skill}</h2>
                   <ul className="ds-skills-list">
                     <li>JavaScript</li>
                     <li>Node.js</li>
@@ -292,14 +342,14 @@ export default function Home() {
             <div className="col-sm-6 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 grid-margin">
               <div className="card overlay">
                 <div className="card-body lope">
-                  <h2 className="ds-heading">Otras Habilidades</h2>
+                  <h2 className="ds-heading">{t.home.skill2}</h2>
                   <ul className="ds-skills-list">
-                    <li>Diseño UX/UI</li>
+                    <li>{t.home.skill3}</li>
                     <li>Photoshop</li>
-                    <li>Diseño Web Responsivo</li>
+                    <li>{t.home.skill4}</li>
                     <li>Illustrator</li>
                     <li>Hosting</li>
-                    <li>Virtualizar</li>
+                    <li>{t.home.skill5}</li>
                     <li>Linux</li>
                     <li>Flutter</li>
                   </ul>
@@ -314,22 +364,16 @@ export default function Home() {
       <div className="ds-experience-section">
         <div className="container overlay">
           <section className="lope">
-            <h2 className="ds-heading">Experiencia de Trabajo</h2>
+            <h2 className="ds-heading">{t.home.expirence}</h2>
             <div className="row ds-experience-list justify-content-center">
               <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                 <section>
                   <span className="ds-year">2021 - 2021</span>
                   <h3 className="ds-officename">Somax Group</h3>
-                  <span className="ds-department">
-                    Desarrollo Web Corporativo
-                  </span>
+                  <span className="ds-department">{t.home.expirence2}</span>
+                  <p>{t.home.expirence3}</p>
                   <p>
-                    Desarrollo Web estático con el objetivo de dar a conocer a
-                    los usuarios, visitas o clientes toda la información
-                    relacionada con una empresa.
-                  </p>
-                  <p>
-                    <strong>Tecnologías empleadas:</strong>
+                    <strong>{t.home.tegnologies}</strong>
                   </p>
                   <ul className="ds-skills-list">
                     <li>JavaScript</li>
@@ -343,15 +387,10 @@ export default function Home() {
                 <section>
                   <span className="ds-year">2021 - 2022</span>
                   <h3 className="ds-officename">Ferro Aluminio</h3>
-                  <span className="ds-department">
-                    Desarrollo Web Corporativo
-                  </span>
+                  <span className="ds-department">{t.home.expirence2}</span>
+                  <p>{t.home.expirence4}</p>
                   <p>
-                    Desarrollo Web estático montado en servidor Cpanel en
-                    WordPress.
-                  </p>
-                  <p>
-                    <strong>Tecnologías empleadas:</strong>
+                    <strong>{t.home.tegnologies}</strong>
                   </p>
                   <ul className="ds-skills-list">
                     <li>PHP</li>
@@ -366,22 +405,17 @@ export default function Home() {
                 <section>
                   <span className="ds-year">2022 - 2022</span>
                   <h3 className="ds-officename">Comproy</h3>
-                  <span className="ds-department">
-                    Desarrollo Web Finaciero
-                  </span>
+                  <span className="ds-department">{t.home.expirence5}</span>
+                  <p>{t.home.expirence6}</p>
                   <p>
-                    Pagina Web App dinámica ofrece una mayor interactividad con
-                    los usuarios.
-                  </p>
-                  <p>
-                    <strong>Tecnologías empleadas:</strong>
+                    <strong>{t.home.tegnologies}</strong>
                   </p>
                   <ul className="ds-skills-list">
                     <li>Node.JS</li>
                     <li>JavaScript</li>
                     <li>Webpack</li>
                     <li>Jquery</li>
-                    <li>Express.js</li>
+                    <li>Express.JS</li>
                     <li>React.JS</li>
                     <li>CSS</li>
                     <li>HTML</li>
@@ -397,7 +431,7 @@ export default function Home() {
       <div className="ds-work-section">
         <div className="container overlay">
           <section className="lope">
-            <h2 className="ds-heading">Trabajos</h2>
+            <h2 className="ds-heading">{t.home.work}</h2>
             <div className="ds-work-list-section">
               <div className="ds-work-list">
                 <div className="row justify-content-center">
@@ -418,7 +452,7 @@ export default function Home() {
                               className="ds-button"
                               rel="noreferrer"
                             >
-                              Ver
+                              {t.home.show}
                             </a>
                           </div>
                         </div>
@@ -442,7 +476,7 @@ export default function Home() {
                               className="ds-button"
                               rel="noreferrer"
                             >
-                              Ver
+                              {t.home.show}
                             </a>
                           </div>
                         </div>
@@ -470,7 +504,7 @@ export default function Home() {
                               className="ds-button"
                               rel="noreferrer"
                             >
-                              Ver
+                              {t.home.show}
                             </a>
                           </div>
                         </div>
@@ -494,7 +528,7 @@ export default function Home() {
                               className="ds-button"
                               rel="noreferrer"
                             >
-                              Ver
+                              {t.home.show}
                             </a>
                           </div>
                         </div>
@@ -524,13 +558,13 @@ export default function Home() {
       <footer className="ds-footer text-center">
         <div className="container">
           <section>
-            <h4>¿Preparado para Hablar?</h4>
-            <p>No dude en contactarme</p>
+            <h4>{t.home.footer}</h4>
+            <p>{t.home.footer2}</p>
             <a
               href="mailto:angelfabian.becerra@gmail.com"
               className="ds-button"
             >
-              Hablemos
+              {t.home.talk}
             </a>
           </section>
           <span className="ds-copyright" id="copyright">

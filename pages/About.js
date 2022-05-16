@@ -1,7 +1,14 @@
 import Link from "next/link";
+import en from "../translations/en/en";
+import es from "../translations/es/es";
+import { useRouter } from "next/router";
+
 // import Image from "next/image";
 
 function Home() {
+
+  const { asPath, locale, locales } = useRouter();
+  const t = locale === "es" ? es : en;
 
   if (typeof window !== "undefined") {
     function refresh() {
@@ -15,7 +22,7 @@ function Home() {
     <div className="page-wrap">
       <header id="page-header" className="page-header">
         <div className="page-title">
-          <h1>Test</h1>
+          <h1>{t.about.h1}</h1>
         </div>
         <div className="img-card">
           {/* <Image
