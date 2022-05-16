@@ -1,8 +1,7 @@
-import en from "../translations/en/en";
-import es from "../translations/es/es";
+import en from "../components/translations/en/en";
+import es from "../components/translations/es/es";
 import { useRouter } from "next/router";
 import Link from "next/link";
-
 
 const Selector = () => {
   // Cambio de Lenguaje
@@ -11,14 +10,13 @@ const Selector = () => {
 
   return (
     <>
-        {locales.map((loc) => (
-          <li key={loc}>
-            <Link href={asPath} locale={loc}>
-                <a>{loc}</a>
-            </Link>
-          </li>
-        ))}
-      
+      {locales.map((loc) => (
+        <li key={loc}>
+          <Link href={asPath} locale={loc}>
+            <a>{loc}</a>
+          </Link>
+        </li>
+      ))}
     </>
   );
 };

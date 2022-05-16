@@ -7,8 +7,8 @@ import proyect_3 from "../styles/assets/images/work_3.jpg";
 import proyect_4 from "../styles/assets/images/work_4.jpg";
 import Selector from "../components/Selector";
 
-import en from "../translations/en/en";
-import es from "../translations/es/es";
+import en from "../components/translations/en/en";
+import es from "../components/translations/es/es";
 
 import Script_1 from "../components/Script_1";
 import { useRouter } from "next/router";
