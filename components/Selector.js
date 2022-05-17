@@ -10,15 +10,6 @@ const Selector = () => {
 
   const router = useRouter();
 
-//   const handleLocaleChange = (event) => {
-//     const value = event.target.value;
-
-//     router.push(router.route, router.asPath, {
-//       locale: value,
-//     });
-//   };
-
-
   return (
     <>
       {locales.map((loc) => (
@@ -28,12 +19,6 @@ const Selector = () => {
           </Link>
         </li>
       ))}
-
-      {/* <select onChange={handleLocaleChange} value={router.locale}>
-        <option value="en">🇺🇸 English</option>
-        <option value="zh-CN">🇨🇳 中文</option>
-        <option value="sv">🇸🇪 Swedish</option>
-      </select> */}
     </>
   );
 };

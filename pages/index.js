@@ -176,7 +176,7 @@ export default function Home() {
               <div className="row justify-content-center">
                 <div className="col-md-5">
                   <a
-                    href="./pdf/Angel_Becerra_CV.pdf"
+                    href="./pdf/Angel_Becerra_CV_es.pdf"
                     target="_blank"
                     className="ds-button margin-bottom-lg"
                   >
@@ -185,7 +185,7 @@ export default function Home() {
                 </div>
                 <div className="col-md-5">
                   <a
-                    href="./pdf/Angel_Becerra_CV.pdf"
+                    href="./pdf/Angel_Becerra_CV_en.pdf"
                     target="_blank"
                     className="ds-button"
                   >
@@ -558,13 +558,13 @@ export default function Home() {
       <footer className="ds-footer text-center">
         <div className="container">
           <section>
-            <h4>¿Preparado para Hablar?</h4>
-            <p>No dude en contactarme</p>
+            <h4>{t.home.footer}</h4>
+            <p>{t.home.footer2}</p>
             <a
               href="mailto:angelfabian.becerra@gmail.com"
               className="ds-button"
             >
-              Hablemos
+              {t.home.talk}
             </a>
           </section>
           <span className="ds-copyright" id="copyright">
