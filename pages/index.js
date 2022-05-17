@@ -7,8 +7,8 @@ import proyect_3 from "../styles/assets/images/work_3.jpg";
 import proyect_4 from "../styles/assets/images/work_4.jpg";
 import Selector from "../components/Selector";
 
-import en from "../components/translations/en/en";
-import es from "../components/translations/es/es";
+import en from "../locales/en/en.json";
+import es from "../locales/es/es";
 
 import Script_1 from "../components/Script_1";
 import { useRouter } from "next/router";
@@ -24,9 +24,9 @@ import { useRouter } from "next/router";
 // );
 
 export default function Home() {
-  const router = useRouter();
 
   // Cambio de Lenguaje
+  const router = useRouter();
   const { asPath, locale, locales } = useRouter();
   const t = locale === "es" ? es : en;
 
@@ -176,7 +176,7 @@ export default function Home() {
               <div className="row justify-content-center">
                 <div className="col-md-5">
                   <a
-                    href="./pdf/Angel_Becerra_CV_es.pdf"
+                    href="./pdf/Angel_Becerra_CV.pdf"
                     target="_blank"
                     className="ds-button margin-bottom-lg"
                   >
@@ -185,7 +185,7 @@ export default function Home() {
                 </div>
                 <div className="col-md-5">
                   <a
-                    href="./pdf/Angel_Becerra_CV_en.pdf"
+                    href="./pdf/Angel_Becerra_CV.pdf"
                     target="_blank"
                     className="ds-button"
                   >
@@ -558,13 +558,13 @@ export default function Home() {
       <footer className="ds-footer text-center">
         <div className="container">
           <section>
-            <h4>{t.home.footer}</h4>
-            <p>{t.home.footer2}</p>
+            <h4>¿Preparado para Hablar?</h4>
+            <p>No dude en contactarme</p>
             <a
               href="mailto:angelfabian.becerra@gmail.com"
               className="ds-button"
             >
-              {t.home.talk}
+              Hablemos
             </a>
           </section>
           <span className="ds-copyright" id="copyright">

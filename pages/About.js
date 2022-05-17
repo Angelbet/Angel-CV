@@ -1,6 +1,6 @@
 import Link from "next/link";
-import en from "../translations/en/en";
-import es from "../translations/es/es";
+import en from "../locales/en/en.json";
+import es from "../locales/es/es";
 import { useRouter } from "next/router";
 
 // import Image from "next/image";
