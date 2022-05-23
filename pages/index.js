@@ -7,6 +7,10 @@ import proyect_3 from "../styles/assets/images/work_3.jpg";
 import proyect_4 from "../styles/assets/images/work_4.jpg";
 import Selector from "../components/Selector";
 
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+
 import en from "../locales/en/en.json";
 import es from "../locales/es/es";
 
@@ -24,7 +28,6 @@ import { useRouter } from "next/router";
 // );
 
 export default function Home() {
-
   // Cambio de Lenguaje
   const router = useRouter();
   const { asPath, locale, locales } = useRouter();
@@ -127,24 +130,37 @@ export default function Home() {
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
               <figure>
-                <Image src={profile} alt="perfil" />
+                <Image
+                  src={profile}
+                  alt="perfil"
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                />
               </figure>
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7">
               <section>
-                <h1>
+                <h1 data-aos="fade-left" data-aos-duration="1000">
                   <span>{t.home.hi}</span>
                   {/* Soy Angel Becerra <br /> Desarrollador Web y App Front-end con
                   sede en Venezuela. */}
                 </h1>
-                <div className="css-typing">
+                <div
+                  className="css-typing"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
                   <h1>{t.home.me}</h1>
                   <h1>{t.home.me2}</h1>
                   <h1>{t.home.me3}</h1>
                   <h1>{t.home.me4}</h1>
                 </div>
 
-                <ul className="ds-numbervalulist">
+                <ul
+                  className="ds-numbervalulist"
+                  data-aos="fade-down"
+                  data-aos-duration="1000"
+                >
                   <li>
                     <strong>2+</strong>
                     <span>{t.home.me5}</span>
@@ -167,7 +183,11 @@ export default function Home() {
 
       {/* Sobre mi */}
       <div className="ds-about-section">
-        <div className="container overlay">
+        <div
+          className="container overlay"
+          data-aos="zoom-in-left"
+          data-aos-duration="2500"
+        >
           <section className="lope">
             <h2 className="ds-heading">{t.home.about}</h2>
             <p>{t.home.about2}</p>
@@ -179,11 +199,17 @@ export default function Home() {
                     href="./pdf/Angel_Becerra_CV_es.pdf"
                     target="_blank"
                     className="ds-button margin-bottom-lg"
+                    data-aos="zoom-in-left"
+                    data-aos-duration="1000"
                   >
                     Descargar CV | Español
                   </a>
                 </div>
-                <div className="col-md-5">
+                <div
+                  className="col-md-5"
+                  data-aos="zoom-in-right"
+                  data-aos-duration="1000"
+                >
                   <a
                     href="./pdf/Angel_Becerra_CV_en.pdf"
                     target="_blank"
@@ -201,7 +227,11 @@ export default function Home() {
 
       {/* Educación */}
       <div className="ds-experience-section">
-        <div className="container overlay">
+        <div
+          className="container overlay"
+          data-aos="zoom-in-right"
+          data-aos-duration="2500"
+        >
           <section className="lope">
             <h2 className="ds-heading">{t.home.education}</h2>
 
@@ -321,37 +351,81 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-sm-6 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 grid-margin">
-              <div className="card overlay">
+              <div
+                className="card overlay"
+                data-aos="fade-down"
+                data-aos-duration="2000"
+              >
                 <div className="card-body lope">
                   <h2 className="ds-heading">{t.home.skill}</h2>
                   <ul className="ds-skills-list">
-                    <li>JavaScript</li>
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                    <li>MongoDB</li>
-                    <li>Next.js</li>
-                    <li>React</li>
-                    <li>CSS</li>
-                    <li>Github</li>
-                    <li>Webpack</li>
-                    <li>HTML</li>
+                    <li data-aos="zoom-in-right" data-aos-duration="2000">
+                      JavaScript
+                    </li>
+                    <li data-aos="zoom-in-left" data-aos-duration="2000">
+                      Node.js
+                    </li>
+                    <li data-aos="zoom-in-right" data-aos-duration="2000">
+                      Express.js
+                    </li>
+                    <li data-aos="zoom-in-left" data-aos-duration="2000">
+                      MongoDB
+                    </li>
+                    <li data-aos="zoom-in-right" data-aos-duration="2000">
+                      Next.js
+                    </li>
+                    <li data-aos="zoom-in-left" data-aos-duration="2000">
+                      React
+                    </li>
+                    <li data-aos="zoom-in-right" data-aos-duration="2000">
+                      CSS
+                    </li>
+                    <li data-aos="zoom-in-left" data-aos-duration="2000">
+                      Github
+                    </li>
+                    <li data-aos="zoom-in-right" data-aos-duration="2000">
+                      Webpack
+                    </li>
+                    <li data-aos="zoom-in-left" data-aos-duration="2000">
+                      HTML
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
             <div className="col-sm-6 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 grid-margin">
-              <div className="card overlay">
+              <div
+                className="card overlay"
+                data-aos="fade-down"
+                data-aos-duration="2000"
+              >
                 <div className="card-body lope">
                   <h2 className="ds-heading">{t.home.skill2}</h2>
                   <ul className="ds-skills-list">
-                    <li>{t.home.skill3}</li>
-                    <li>Photoshop</li>
-                    <li>{t.home.skill4}</li>
-                    <li>Illustrator</li>
-                    <li>Hosting</li>
-                    <li>{t.home.skill5}</li>
-                    <li>Linux</li>
-                    <li>Flutter</li>
+                    <li data-aos="zoom-in-right" data-aos-duration="2000">
+                      {t.home.skill3}
+                    </li>
+                    <li data-aos="zoom-in-left" data-aos-duration="2000">
+                      Photoshop
+                    </li>
+                    <li data-aos="zoom-in-right" data-aos-duration="2000">
+                      {t.home.skill4}
+                    </li>
+                    <li data-aos="zoom-in-left" data-aos-duration="2000">
+                      Illustrator
+                    </li>
+                    <li data-aos="zoom-in-right" data-aos-duration="2000">
+                      Hosting
+                    </li>
+                    <li data-aos="zoom-in-left" data-aos-duration="2000">
+                      {t.home.skill5}
+                    </li>
+                    <li data-aos="zoom-in-right" data-aos-duration="2000">
+                      Linux
+                    </li>
+                    <li data-aos="zoom-in-left" data-aos-duration="2000">
+                      Flutter
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -361,13 +435,17 @@ export default function Home() {
       </div>
       {/*  Habilidades */}
       {/* Experiencia */}
-      <div className="ds-experience-section">
+      <div
+        className="ds-experience-section"
+        data-aos="fade-in"
+        data-aos-duration="3500"
+      >
         <div className="container overlay">
           <section className="lope">
             <h2 className="ds-heading">{t.home.expirence}</h2>
             <div className="row ds-experience-list justify-content-center">
               <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <section>
+                <section data-aos="fade-up" data-aos-duration="4500">
                   <span className="ds-year">2021 - 2021</span>
                   <h3 className="ds-officename">Somax Group</h3>
                   <span className="ds-department">{t.home.expirence2}</span>
@@ -384,7 +462,7 @@ export default function Home() {
                 </section>
               </div>
               <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <section>
+                <section data-aos="fade-up" data-aos-duration="4500">
                   <span className="ds-year">2021 - 2022</span>
                   <h3 className="ds-officename">Ferro Aluminio</h3>
                   <span className="ds-department">{t.home.expirence2}</span>
@@ -402,7 +480,7 @@ export default function Home() {
                 </section>
               </div>
               <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <section>
+                <section data-aos="fade-up" data-aos-duration="4500">
                   <span className="ds-year">2022 - 2022</span>
                   <h3 className="ds-officename">Comproy</h3>
                   <span className="ds-department">{t.home.expirence5}</span>
@@ -428,7 +506,11 @@ export default function Home() {
       </div>
       {/* Experiencia */}
       {/*  Trabajos */}
-      <div className="ds-work-section">
+      <div
+        className="ds-work-section"
+        data-aos="fade-in"
+        data-aos-duration="3500"
+      >
         <div className="container overlay">
           <section className="lope">
             <h2 className="ds-heading">{t.home.work}</h2>
@@ -436,7 +518,11 @@ export default function Home() {
               <div className="ds-work-list">
                 <div className="row justify-content-center">
                   <div className="col-sm-5 grid-margin">
-                    <div className="card overlay">
+                    <div
+                      className="card overlay"
+                      data-aos="zoom-in"
+                      data-aos-duration="1500"
+                    >
                       <div className="card-body lope">
                         <h3 className="ds-work-tilte">Somax Group</h3>
                         <div className="row justify-content-center">
@@ -460,7 +546,11 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-sm-5 grid-margin">
-                    <div className="card overlay">
+                    <div
+                      className="card overlay"
+                      data-aos="zoom-in"
+                      data-aos-duration="1500"
+                    >
                       <div className="card-body lope">
                         <h3 className="ds-work-tilte">Ferro Aluminio</h3>
                         <div className="row justify-content-center">
@@ -488,7 +578,11 @@ export default function Home() {
               <div className="ds-work-list">
                 <div className="row justify-content-center">
                   <div className="col-sm-5 grid-margin">
-                    <div className="card overlay">
+                    <div
+                      className="card overlay"
+                      data-aos="zoom-in"
+                      data-aos-duration="1500"
+                    >
                       <div className="card-body lope">
                         <h3 className="ds-work-tilte">Comproy</h3>
                         <div className="row justify-content-center">
@@ -512,7 +606,11 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-sm-5 grid-margin">
-                    <div className="card overlay">
+                    <div
+                      className="card overlay"
+                      data-aos="zoom-in"
+                      data-aos-duration="1500"
+                    >
                       <div className="card-body lope">
                         <h3 className="ds-work-tilte">Colegio El Ángel</h3>
                         <div className="row justify-content-center">
@@ -558,16 +656,27 @@ export default function Home() {
       <footer className="ds-footer text-center">
         <div className="container">
           <section>
-            <h4>{t.home.footer}</h4>
-            <p>{t.home.footer2}</p>
+            <h4 data-aos="fade-in" data-aos-duration="2000">
+              {t.home.footer}
+            </h4>
+            <p data-aos="fade-in" data-aos-duration="2000">
+              {t.home.footer2}
+            </p>
             <a
               href="mailto:angelfabian.becerra@gmail.com"
               className="ds-button"
+              data-aos="fade-up"
+              data-aos-duration="1000"
             >
               {t.home.talk}
             </a>
           </section>
-          <span className="ds-copyright" id="copyright">
+          <span
+            className="ds-copyright"
+            id="copyright"
+            data-aos="fade-in"
+            data-aos-duration="2500"
+          >
             © {new Date().getFullYear()}. By
             <Link href="/"> Angel Becerra</Link>
           </span>
