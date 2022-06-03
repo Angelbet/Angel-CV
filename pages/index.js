@@ -338,6 +338,64 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
+                  <div className="col-md-6">
+                    <div className="edu-col ds-experience-list">
+                      <span>2022</span>
+                      <h3 className="ds-officename">
+                        Adobe Photoshop CC Fundamentals and Essentials Training
+                      </h3>
+                      <p>
+                        {t.home.udemy} &nbsp; &nbsp;
+                        <a
+                          href="./pdf/Courses/Certificate_6.pdf"
+                          target="_blank"
+                          className="ds-button"
+                          rel="noreferrer"
+                        >
+                          {t.home.show}
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="edu-col ds-experience-list">
+                      <span>2022</span>
+                      <h3 className="ds-officename">
+                        Complete Figma Web Design Course UI UX Design with
+                        Projects
+                      </h3>
+                      <p>
+                        {t.home.udemy} &nbsp; &nbsp;
+                        <a
+                          href="./pdf/Courses/Certificate_7.pdf"
+                          target="_blank"
+                          className="ds-button"
+                          rel="noreferrer"
+                        >
+                          {t.home.show}
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="edu-col ds-experience-list">
+                      <span>2022</span>
+                      <h3 className="ds-officename">
+                        GitLab
+                      </h3>
+                      <p>
+                        {t.home.udemy} &nbsp; &nbsp;
+                        <a
+                          href="./pdf/Courses/Certificate_8.pdf"
+                          target="_blank"
+                          className="ds-button"
+                          rel="noreferrer"
+                        >
+                          {t.home.show}
+                        </a>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
