@@ -24,7 +24,7 @@ export default function Home() {
   // Cambio de Lenguaje
   const router = useRouter();
   const { asPath, locale, locales } = useRouter();
-  const t = locale === "en" ? es : en;
+  const t = locale === "es" ? es : en;
 
   // Reload de la Pagina
   if (typeof window !== "undefined") {
@@ -34,8 +34,8 @@ export default function Home() {
       }, 100);
     }
 
-
     
+
   }
 
   return (
@@ -84,6 +84,7 @@ export default function Home() {
                   href="mailto:angelfabian.becerra@gmail.com"
                   target="_blank"
                   rel="noreferrer"
+                  title="Email"
                 >
                   <i className="ri-mail-fill" />
                 </a>
@@ -93,6 +94,7 @@ export default function Home() {
                   href="http://linkedin.com/in/angel-becerra-2a4435202"
                   target="_blank"
                   rel="noreferrer"
+                  title="Linkedin"
                 >
                   <i className="ri-linkedin-fill" />
                 </a>
@@ -102,6 +104,7 @@ export default function Home() {
                   href="https://www.instagram.com/angil_b3/"
                   target="_blank"
                   rel="noreferrer"
+                  title="Instagram"
                 >
                   <i className="ri-instagram-fill" />
                 </a>
@@ -111,6 +114,7 @@ export default function Home() {
                   href="https://www.facebook.com/AngelBecerra13"
                   target="_blank"
                   rel="noreferrer"
+                  title="Facebook"
                 >
                   <i className="ri-facebook-fill" />
                 </a>
