@@ -5,33 +5,26 @@ import proyect_1 from "../styles/assets/images/work_1.jpg";
 import proyect_2 from "../styles/assets/images/work_2.jpg";
 import proyect_3 from "../styles/assets/images/work_3.jpg";
 import proyect_4 from "../styles/assets/images/work_4.jpg";
+import proyect_5 from "../styles/assets/images/work_5.jpg";
+import proyect_6 from "../styles/assets/images/work_6.jpg";
 import Selector from "../components/Selector";
 
+
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 
 import en from "../locales/en/en.json";
 import es from "../locales/es/es";
 
 import Script_1 from "../components/Script_1";
 import { useRouter } from "next/router";
-// import pdf from "../public/pdf/Angel_Becerra_CV.pdf"
 
-// import '../static/js/main'
-
-// const main = dynamic(
-//   () => {
-//     return import("./main.js");
-//   },
-//   { ssr: false }
-// );
 
 export default function Home() {
   // Cambio de Lenguaje
   const router = useRouter();
   const { asPath, locale, locales } = useRouter();
-  const t = locale === "es" ? es : en;
+  const t = locale === "en" ? es : en;
 
   // Reload de la Pagina
   if (typeof window !== "undefined") {
@@ -40,6 +33,9 @@ export default function Home() {
         location.reload();
       }, 100);
     }
+
+
+    
   }
 
   return (
@@ -93,7 +89,11 @@ export default function Home() {
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank">
+                <a
+                  href="http://linkedin.com/in/angel-becerra-2a4435202"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="ri-linkedin-fill" />
                 </a>
               </li>
@@ -123,7 +123,6 @@ export default function Home() {
       </header>
       {/* header */}
 
-      {/* Header End */}
       {/* banner */}
       <div className="ds-banner">
         <div className="container">
@@ -166,11 +165,11 @@ export default function Home() {
                     <span>{t.home.me5}</span>
                   </li>
                   <li>
-                    <strong>5</strong>
+                    <strong>6</strong>
                     <span>{t.home.me6}</span>
                   </li>
                   <li>
-                    <strong>3</strong>
+                    <strong>7</strong>
                     <span>{t.home.me7}</span>
                   </li>
                 </ul>
@@ -380,13 +379,31 @@ export default function Home() {
                   <div className="col-md-6">
                     <div className="edu-col ds-experience-list">
                       <span>2022</span>
-                      <h3 className="ds-officename">
-                        GitLab
-                      </h3>
+                      <h3 className="ds-officename">GitLab</h3>
                       <p>
                         {t.home.udemy} &nbsp; &nbsp;
                         <a
                           href="./pdf/Courses/Certificate_8.pdf"
+                          target="_blank"
+                          className="ds-button"
+                          rel="noreferrer"
+                        >
+                          {t.home.show}
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="edu-col ds-experience-list">
+                      <span>2022</span>
+                      <h3 className="ds-officename">
+                        Practical Next.js &amp; React - Build a real WebApp with
+                        Next.js
+                      </h3>
+                      <p>
+                        {t.home.udemy} &nbsp; &nbsp;
+                        <a
+                          href="./pdf/Courses/Certificate_9.pdf"
                           target="_blank"
                           className="ds-button"
                           rel="noreferrer"
@@ -465,6 +482,9 @@ export default function Home() {
                     </li>
                     <li data-aos="zoom-in-left" data-aos-duration="2000">
                       Photoshop
+                    </li>
+                    <li data-aos="zoom-in-left" data-aos-duration="2000">
+                      Figma
                     </li>
                     <li data-aos="zoom-in-right" data-aos-duration="2000">
                       {t.home.skill4}
@@ -675,11 +695,67 @@ export default function Home() {
                           <div className=" my-auto">
                             <div className="d-flex d-sm-block d-md-flex align-items-center">
                               <figure>
-                                <Image src={proyect_4} alt="web3" />
+                                <Image src={proyect_4} alt="web4" />
                               </figure>
                             </div>
                             <a
                               href="http://64.227.2.149/"
+                              target="_blank"
+                              className="ds-button"
+                              rel="noreferrer"
+                            >
+                              {t.home.show}
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-5 grid-margin">
+                    <div
+                      className="card overlay"
+                      data-aos="zoom-in"
+                      data-aos-duration="1500"
+                    >
+                      <div className="card-body lope">
+                        <h3 className="ds-work-tilte">MuraBox</h3>
+                        <div className="row justify-content-center">
+                          <div className=" my-auto">
+                            <div className="d-flex d-sm-block d-md-flex align-items-center">
+                              <figure>
+                                <Image src={proyect_5} alt="web5" />
+                              </figure>
+                            </div>
+                            <a
+                              href="https://prototipo-2.000webhostapp.com/"
+                              target="_blank"
+                              className="ds-button"
+                              rel="noreferrer"
+                            >
+                              {t.home.show}
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-5 grid-margin">
+                    <div
+                      className="card overlay"
+                      data-aos="zoom-in"
+                      data-aos-duration="1500"
+                    >
+                      <div className="card-body lope">
+                        <h3 className="ds-work-tilte">Búcreativa</h3>
+                        <div className="row justify-content-center">
+                          <div className=" my-auto">
+                            <div className="d-flex d-sm-block d-md-flex align-items-center">
+                              <figure>
+                                <Image src={proyect_6} alt="web6" />
+                              </figure>
+                            </div>
+                            <a
+                              href="https://bucreativa.vercel.app/"
                               target="_blank"
                               className="ds-button"
                               rel="noreferrer"
@@ -698,6 +774,72 @@ export default function Home() {
         </div>
       </div>
       {/*  Trabajos */}
+
+      {/* <div className="container">
+  <div className="row">
+    <div className="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h1 className="gallery-title">Cursos</h1>
+    </div>
+    <div align="center">
+      <button className="btn btn-default filter-button" data-filter="all">
+        1
+      </button>
+      <button className="btn btn-default filter-button" data-filter="hdpe">
+        2
+      </button>
+      <button className="btn btn-default filter-button" data-filter="sprinkle">
+        3
+      </button>
+      <button className="btn btn-default filter-button" data-filter="spray">
+        4
+      </button>
+      <button
+        className="btn btn-default filter-button"
+        data-filter="irrigation"
+      >
+        UX
+      </button>
+    </div>
+    <br />
+    <div className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+      <img src="http://fakeimg.pl/365x365/" className="img-responsive" />
+    </div>
+    <div className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+      <img src="http://fakeimg.pl/365x365/" className="img-responsive" />
+    </div>
+    <div className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+      <img src="http://fakeimg.pl/365x365/" className="img-responsive" />
+    </div>
+    <div className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+      <img src="http://fakeimg.pl/365x365/" className="img-responsive" />
+    </div>
+    <div className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+      <img src="http://fakeimg.pl/365x365/" className="img-responsive" />
+    </div>
+    <div className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+      <img src="http://fakeimg.pl/365x365/" className="img-responsive" />
+    </div>
+    <div className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+      <img src="http://fakeimg.pl/365x365/" className="img-responsive" />
+    </div>
+    <div className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+      <img src="http://fakeimg.pl/365x365/" className="img-responsive" />
+    </div>
+    <div className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+      <img src="http://fakeimg.pl/365x365/" className="img-responsive" />
+    </div>
+    <div className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+      <img src="http://fakeimg.pl/365x365/" className="img-responsive" />
+    </div>
+    <div className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+      <img src="http://fakeimg.pl/365x365/" className="img-responsive" />
+    </div>
+    <div className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+      <img src="http://fakeimg.pl/365x365/" className="img-responsive" />
+    </div>
+  </div>
+</div> */}
+
       {/* <ul>
         <li>
           <Link href="/" onClick={() => router.reload()}>
