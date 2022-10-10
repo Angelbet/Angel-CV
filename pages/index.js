@@ -169,11 +169,11 @@ export default function Home() {
                     <span>{t.home.me5}</span>
                   </li>
                   <li>
-                    <strong>6</strong>
+                    <strong>11</strong>
                     <span>{t.home.me6}</span>
                   </li>
                   <li>
-                    <strong>7</strong>
+                    <strong>15</strong>
                     <span>{t.home.me7}</span>
                   </li>
                 </ul>
