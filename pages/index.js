@@ -703,7 +703,7 @@ export default function Home() {
                               </figure>
                             </div>
                             <a
-                              href="http://64.227.2.149/"
+                              href="https://test-web-2ab.000webhostapp.com/index-4.html"
                               target="_blank"
                               className="ds-button"
                               rel="noreferrer"
@@ -731,7 +731,7 @@ export default function Home() {
                               </figure>
                             </div>
                             <a
-                              href="https://prototipo-2.000webhostapp.com/"
+                              href="https://test-web-1ab.000webhostapp.com/"
                               target="_blank"
                               className="ds-button"
                               rel="noreferrer"
