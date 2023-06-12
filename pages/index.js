@@ -7,6 +7,8 @@ import proyect_3 from "../styles/assets/images/work_3.jpg";
 import proyect_4 from "../styles/assets/images/work_4.jpg";
 import proyect_5 from "../styles/assets/images/work_5.jpg";
 import proyect_6 from "../styles/assets/images/work_6.jpg";
+import proyect_7 from "../styles/assets/images/work_7.jpg";
+import proyect_8 from "../styles/assets/images/work_8.jpg";
 import Selector from "../components/Selector";
 
 
@@ -760,6 +762,62 @@ export default function Home() {
                             </div>
                             <a
                               href="https://bucreativa.vercel.app/"
+                              target="_blank"
+                              className="ds-button"
+                              rel="noreferrer"
+                            >
+                              {t.home.show}
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-5 grid-margin">
+                    <div
+                      className="card overlay"
+                      data-aos="zoom-in"
+                      data-aos-duration="1500"
+                    >
+                      <div className="card-body lope">
+                        <h3 className="ds-work-tilte">EstructuraSP</h3>
+                        <div className="row justify-content-center">
+                          <div className=" my-auto">
+                            <div className="d-flex d-sm-block d-md-flex align-items-center">
+                              <figure>
+                                <Image src={proyect_7} alt="web6" />
+                              </figure>
+                            </div>
+                            <a
+                              href="https://estructurasp.com/"
+                              target="_blank"
+                              className="ds-button"
+                              rel="noreferrer"
+                            >
+                              {t.home.show}
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-5 grid-margin">
+                    <div
+                      className="card overlay"
+                      data-aos="zoom-in"
+                      data-aos-duration="1500"
+                    >
+                      <div className="card-body lope">
+                        <h3 className="ds-work-tilte">GaleryAn</h3>
+                        <div className="row justify-content-center">
+                          <div className=" my-auto">
+                            <div className="d-flex d-sm-block d-md-flex align-items-center">
+                              <figure>
+                                <Image src={proyect_8} alt="web6" />
+                              </figure>
+                            </div>
+                            <a
+                              href="https://galeryan.com/"
                               target="_blank"
                               className="ds-button"
                               rel="noreferrer"
